@@ -1,6 +1,14 @@
 # SMTP to HTTP Email Forwarder
 
-This project contains a Python application that acts as a local SMTP server to receive emails and forward them to HTTP endpoints based on the recipient's email address. It also includes a script for sending test emails to the local SMTP server.
+This project contains a Python application that acts as a local SMTP server to receive emails and forward them to HTTP endpoints based on the recipient's email address. The intended use is for tools like n8n or other Webhook receivers to be able to receive email via SMTP. 
+
+### Content decoding
+
+Currently the script only supports decoding of `text/plain` and `text/html` content types. It will ignore other content types.
+
+### Test script
+
+The repo also includes a script for easy sending of test emails to the main script locally.
 
 ## Requirements
 
